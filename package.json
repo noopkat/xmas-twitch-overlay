@@ -1,14 +1,14 @@
 {
   "name": "xmas-overlay",
   "version": "1.0.0",
-  "description": "",
+  "description": "Twitch overlay / bot for the holiday season!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Suz Hinton",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^4.0.0",
     "irc-framework": "^2.10.2",
