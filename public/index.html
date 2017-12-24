@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Your Website</title>
+  <style>
+    #wrapper {
+      text-align: center;
+    }
+
+    p {
+      font-family: sans-serif;
+      font-weight: bold;
+      color: #6441a4;
+      -webkit-text-stroke: 2px #fff;
+      font-size: 60px; 
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <img id="festivegif"/>
+    <p id="festivetext"></p>
+  </div>
+  <script src="/skateboard.min.js"></script>
+  <script>
+    const img = document.getElementById("festivegif");
+    const txt = document.getElementById("festivetext");
+    const wrapper = document.getElementById("wrapper");
+    
+    wrapper.style.display = 'none';
+
+    skateboard().on('data', (data) => {
+      console.log(data);
+      showFestiveMessage(data);
+    });
+
+    function showFestiveMessage(nick) {
+      txt.textContent = `Happy holidays, ${nick}!`;
+      const random = Math.round(Math.random() * 3);
+      const chosenGif = `images/giphy${random}.gif`;
+      img.src = chosenGif;
+      wrapper.style.display = 'block';
+
+      setTimeout(() => wrapper.style.display = 'none', 5000);
+    };
+
+  </script>
+</body>
+</html>
