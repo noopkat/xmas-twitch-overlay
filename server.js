@@ -24,11 +24,9 @@ function botConnect(callback) {
 };
 
 function dequeue() {
-  if (queue.length) {
-    if (socket) {
-      const nick = queue.shift();
-      socket.write(nick); 
-    }
+  if (queue.length && socket) {
+    const nick = queue.shift();
+    socket.write(nick); 
   }
 }
 
