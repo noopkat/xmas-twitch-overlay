@@ -3,7 +3,6 @@ const IRC = require('irc-framework');
 const skateboard = require('skateboard');
 
 const bot = new IRC.Client();
-let count = 0;
 let socket = null;
 const queue = [];
 
